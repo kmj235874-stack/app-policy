@@ -1,76 +1,162 @@
-<!DOCTYPE html>
+<!doctype html>
+<!--
+  배포 위치: app-policy 저장소의  pdf/privacy.html  에 덮어쓰기 (PDF_Viewer 프로젝트 아님)
+  ⚠️ 앱 이름은 Play 스토어 등록명과 정확히 일치시키세요.
+  ⚠️ GDPR/EEA 대응 보강본. 실제 게시 전 법률 검토 권장.
+-->
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>개인정보처리방침 - PDF 뷰어</title>
-  <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 24px 16px; color: #333; line-height: 1.7; }
-    h1 { font-size: 24px; border-bottom: 2px solid #eee; padding-bottom: 12px; }
-    h2 { font-size: 18px; margin-top: 32px; color: #222; }
-    p, li { font-size: 15px; color: #444; }
-    ul { padding-left: 20px; }
-    .updated { color: #888; font-size: 14px; margin-bottom: 24px; }
-    a { color: #1a73e8; }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PDF 뷰어 — 개인정보처리방침 / Privacy Policy</title>
+<style>
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+       max-width:760px;margin:0 auto;padding:24px 18px;line-height:1.7;color:#1a1a1a}
+  h1{font-size:1.5rem;margin:.2em 0}h2{font-size:1.1rem;margin-top:1.6em}
+  .muted{color:#666;font-size:.9rem}a{color:#1a73e8}
+  ul{padding-left:20px}
+  .toggle{display:flex;gap:8px;margin:8px 0 20px}
+  .toggle button{border:1px solid #ccc;background:#fff;border-radius:20px;
+       padding:6px 16px;cursor:pointer;font-size:.9rem}
+  .toggle button.active{background:#1a73e8;color:#fff;border-color:#1a73e8}
+  section{display:none}section.active{display:block}
+</style>
 </head>
 <body>
+<div class="toggle">
+  <button id="btn-ko" onclick="setLang('ko')">한국어</button>
+  <button id="btn-en" onclick="setLang('en')">English</button>
+</div>
 
+<!-- ===== 한국어 ===== -->
+<section id="ko">
   <h1>개인정보처리방침</h1>
-  <p class="updated">최종 업데이트: 2026년 6월 4일</p>
+  <p class="muted">PDF 뷰어 - PDF Reader &amp; 리더기, 편집 · 개발자(데이터 컨트롤러) Min Je Kim · 최종 업데이트: 2026-06-10</p>
+  <p>Min Je Kim(이하 "개발자")이 제공하는 <strong>PDF 뷰어 - PDF Reader &amp; 리더기, 편집</strong>(이하 "앱")은 사용자의 개인정보를 소중히 여기며 관련 법령(대한민국 개인정보 보호법, 유럽연합 GDPR, 영국 UK GDPR 등)을 준수합니다. 본 방침은 앱이 어떤 정보를 처리하는지, 그 목적과 법적 근거, 사용자의 권리를 설명합니다. PDF 열람·편집·병합·분할·변환·문서 스캔 등 핵심 기능은 <strong>전적으로 사용자 기기 내에서</strong> 처리되며, 앱은 광고 표시·구매 검증을 위해서만 인터넷에 연결합니다.</p>
 
-  <p>
-    Min Je Kim(이하 "개발자")이 제공하는 <strong>PDF 뷰어 - PDF Reader &amp; 리더기, 편집</strong>(이하 "앱")은
-    사용자의 개인정보를 소중히 여기며, 관련 법령을 준수합니다.
-    본 방침은 앱이 수집하는 정보, 수집 목적, 보관 방법 등을 안내합니다.
-  </p>
-
-  <h2>1. 수집하는 정보</h2>
-  <p>앱은 다음 정보를 수집할 수 있습니다.</p>
+  <h2>1. 처리하는 정보</h2>
   <ul>
-    <li><strong>광고 식별자(Advertising ID)</strong>: 맞춤형 광고 제공을 위해 Google AdMob이 수집합니다.</li>
-    <li><strong>기기 정보</strong>: OS 버전, 기기 모델 등 광고 및 오류 분석에 사용됩니다.</li>
+    <li><strong>광고 식별자(Advertising ID) 및 기기 정보</strong>: 광고 게재·성과 측정·사기 방지를 위해 Google AdMob이 수집·사용합니다(OS 버전, 기기 모델, 대략적 위치 추정에 쓰일 수 있는 IP 등).</li>
+    <li><strong>구매 토큰</strong>: '광고 제거' 등 인앱 구매의 처리·검증을 위해 Google Play 결제가 처리합니다.</li>
+    <li><strong>동의 상태</strong>: 유럽 사용자의 광고 동의 선택은 동의 관리 플랫폼(UMP)을 통해 기기에 저장됩니다.</li>
   </ul>
-  <p>앱은 사용자가 열람·편집하는 PDF 파일의 내용을 수집하거나 외부 서버로 전송하지 않습니다. 모든 파일 처리는 기기 내에서 이루어집니다.</p>
+  <p>앱은 사용자가 열람·편집·스캔하는 <strong>문서나 이미지의 내용을 수집·저장·전송하지 않습니다.</strong> 문서 스캔 기능의 카메라 입력은 기기 내에서만 처리되며 앱이 외부로 보내지 않습니다.</p>
 
-  <h2>2. 정보 수집 목적</h2>
+  <h2>2. 처리 목적 및 법적 근거 (GDPR 제6조)</h2>
   <ul>
-    <li>광고 게재 및 광고 성과 측정</li>
-    <li>앱 기능 제공 및 개선</li>
-    <li>인앱 구매 처리 및 검증</li>
+    <li><strong>맞춤형(개인화) 광고</strong> — 동의(제6조 제1항 a호). 유럽경제지역(EEA)·영국·스위스 사용자에게는 광고 처리 전 동의를 요청합니다.</li>
+    <li><strong>비개인화 광고 게재, 빈도 제한, 사기·오류 방지</strong> — 정당한 이익(제6조 제1항 f호).</li>
+    <li><strong>인앱 구매 처리 및 검증</strong> — 계약의 이행(제6조 제1항 b호).</li>
+    <li><strong>법적 의무 준수</strong> — 법령상 의무가 있는 경우(제6조 제1항 c호).</li>
   </ul>
 
-  <h2>3. 제3자 제공</h2>
-  <p>개발자는 다음 제3자 서비스를 사용합니다. 각 서비스의 개인정보처리방침을 참고하세요.</p>
+  <h2>3. 광고 및 동의 (EEA·영국·스위스)</h2>
+  <p>앱은 Google AdMob 광고를 표시합니다. 유럽경제지역·영국·스위스 사용자에게는 Google의 동의 관리 플랫폼(UMP)을 통해 광고 처리 전 동의 메시지를 표시하며, 사용자는 개인화 광고에 동의하거나 거부할 수 있습니다. <strong>동의는 앱 내 설정 화면의 '광고 동의 변경'에서 언제든지 변경·철회할 수 있습니다.</strong> 동의를 거부해도 앱은 계속 사용할 수 있으며, 이 경우 비개인화 광고가 표시될 수 있습니다.</p>
+
+  <h2>4. 제3자 서비스 (데이터 수령자)</h2>
+  <p>앱은 다음 제3자 서비스를 사용하며, 각 서비스는 자체 방침에 따라 데이터를 처리합니다.</p>
   <ul>
-    <li><strong>Google AdMob</strong> (광고 서비스)<br>
-      <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></li>
-    <li><strong>Google Play Billing</strong> (인앱 결제)<br>
-      <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></li>
+    <li><strong>Google AdMob</strong> (광고) — <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">개인정보처리방침</a>, <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">파트너 사이트에서의 데이터 사용</a></li>
+    <li><strong>Google Play 결제</strong> (인앱 구매) — <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">개인정보처리방침</a></li>
+    <li><strong>Google Play 서비스 / ML Kit 문서 스캐너</strong> (기기 내 문서 스캔) — 스캔 처리는 기기에서 수행됩니다.</li>
   </ul>
 
-  <h2>4. 정보 보관 및 삭제</h2>
-  <p>
-    개발자가 직접 수집하는 개인정보는 없습니다. AdMob 등 제3자 서비스가 수집한 데이터의 보관 및 삭제는
-    해당 서비스의 정책에 따릅니다. 광고 식별자는 기기 설정에서 재설정하거나 광고 추적을 제한할 수 있습니다.
-  </p>
+  <h2>5. 국제 데이터 이전</h2>
+  <p>위 제3자(Google)는 사용자의 데이터를 유럽경제지역 밖(예: 미국)에서 처리할 수 있습니다. 이러한 이전은 EU 표준계약조항(SCCs) 등 GDPR이 인정하는 적법한 보호장치에 따라 이루어집니다.</p>
 
-  <h2>5. 아동 개인정보 보호</h2>
-  <p>앱은 만 14세 미만 아동을 대상으로 하지 않으며, 만 14세 미만 아동의 개인정보를 의도적으로 수집하지 않습니다.</p>
+  <h2>6. 보유 및 삭제</h2>
+  <p>개발자는 개인정보를 직접 수집·보관하지 않습니다. AdMob·Google Play가 수집한 데이터의 보유·삭제는 각 서비스의 정책을 따릅니다. 광고 식별자는 기기 설정에서 재설정하거나 추적을 제한할 수 있습니다.</p>
 
-  <h2>6. 사용자 권리</h2>
+  <h2>7. 정보주체의 권리 (GDPR 제15~22조)</h2>
+  <p>유럽경제지역·영국 거주자는 다음 권리를 가집니다: 열람, 정정, 삭제('잊힐 권리'), 처리 제한, 데이터 이동, 처리 반대, 그리고 동의에 근거한 처리의 <strong>동의 철회</strong>(철회 전 처리의 적법성에는 영향을 주지 않음). 이러한 데이터의 대부분은 Google이 처리하므로, Google 계정 및 기기 설정에서 직접 행사하거나 아래 연락처로 요청할 수 있습니다. 또한 거주지 <strong>감독기관에 민원을 제기</strong>할 권리가 있습니다.</p>
+
+  <h2>8. 사용자 선택</h2>
   <ul>
-    <li>기기 설정 → Google → 광고에서 광고 개인화를 제한할 수 있습니다.</li>
-    <li>기기 설정에서 광고 ID를 재설정할 수 있습니다.</li>
-    <li>인앱 구매 내역은 Google Play 계정에서 확인할 수 있습니다.</li>
+    <li>기기 설정 → Google → 광고: 광고 개인화 사용 중지 / 광고 ID 재설정</li>
+    <li>앱 설정 → '광고 동의 변경'(EEA·영국·스위스): 광고 동의 변경·철회</li>
+    <li>인앱 구매 내역: Google Play 계정에서 확인</li>
   </ul>
 
-  <h2>7. 개인정보처리방침 변경</h2>
-  <p>본 방침은 필요 시 업데이트될 수 있습니다. 변경 사항은 이 페이지에 게시되며, 상단의 "최종 업데이트" 날짜가 변경됩니다.</p>
+  <h2>9. 아동의 개인정보</h2>
+  <p>앱은 만 14세 미만(및 GDPR상 동의연령 미만)의 아동을 대상으로 하지 않으며, 해당 아동의 개인정보를 고의로 수집하지 않습니다.</p>
 
-  <h2>8. 문의</h2>
-  <p>개인정보 관련 문의사항은 아래로 연락해 주세요.<br>
-    이메일: <a href="mailto:kmj235874@gmail.com">kmj235874@gmail.com</a></p>
+  <h2>10. 방침 변경</h2>
+  <p>본 방침은 필요 시 업데이트될 수 있으며, 변경 사항은 이 페이지에 게시되고 상단의 "최종 업데이트" 날짜가 갱신됩니다.</p>
 
+  <h2>11. 문의 및 관리자</h2>
+  <p>데이터 컨트롤러: Min Je Kim<br>
+    개인정보 관련 문의: <a href="mailto:kmj235874@gmail.com">kmj235874@gmail.com</a></p>
+</section>
+
+<!-- ===== English ===== -->
+<section id="en">
+  <h1>Privacy Policy</h1>
+  <p class="muted">PDF Viewer - PDF Reader &amp; Editor · Developer (Data Controller): Min Je Kim · Last updated: 2026-06-10</p>
+  <p><strong>PDF Viewer - PDF Reader &amp; Editor</strong> ("the app"), provided by Min Je Kim ("the developer"), respects your privacy and complies with applicable laws, including the EU General Data Protection Regulation (GDPR), the UK GDPR, and Korea's Personal Information Protection Act. This policy explains what information the app processes, the purposes and legal bases, and your rights. Core features — viewing, editing, merging, splitting, converting, and scanning documents — are processed <strong>entirely on your device</strong>. The app connects to the internet only to display ads and verify purchases.</p>
+
+  <h2>1. Information We Process</h2>
+  <ul>
+    <li><strong>Advertising ID and device information</strong>: collected and used by Google AdMob for ad delivery, performance measurement, and fraud prevention (OS version, device model, and an IP address that may be used for coarse location estimation).</li>
+    <li><strong>Purchase token</strong>: processed by Google Play Billing to process and verify in-app purchases such as "Remove Ads."</li>
+    <li><strong>Consent state</strong>: European users' advertising consent choices are stored on the device via the consent management platform (UMP).</li>
+  </ul>
+  <p>The app does <strong>not collect, store, or transmit the content</strong> of the documents or images you view, edit, or scan. Camera input used by the document-scan feature is processed only on your device and is never sent anywhere by the app.</p>
+
+  <h2>2. Purposes and Legal Bases (GDPR Art. 6)</h2>
+  <ul>
+    <li><strong>Personalized ads</strong> — consent (Art. 6(1)(a)). Users in the EEA, UK, and Switzerland are asked for consent before ad processing.</li>
+    <li><strong>Non-personalized ad delivery, frequency capping, fraud/error prevention</strong> — legitimate interests (Art. 6(1)(f)).</li>
+    <li><strong>Processing and verifying in-app purchases</strong> — performance of a contract (Art. 6(1)(b)).</li>
+    <li><strong>Compliance with legal obligations</strong> — where required by law (Art. 6(1)(c)).</li>
+  </ul>
+
+  <h2>3. Advertising and Consent (EEA, UK, Switzerland)</h2>
+  <p>The app shows ads via Google AdMob. For users in the EEA, UK, and Switzerland, a consent message is shown via Google's User Messaging Platform (UMP) before ad processing, allowing you to accept or decline personalized ads. <strong>You can change or withdraw your consent at any time via "Manage ad consent" in the app's Settings.</strong> You can continue to use the app if you decline; in that case non-personalized ads may be shown.</p>
+
+  <h2>4. Third-Party Services (Recipients)</h2>
+  <p>The app uses the following third-party services, each of which processes data under its own policy:</p>
+  <ul>
+    <li><strong>Google AdMob</strong> (advertising) — <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a>, <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses data from partner sites</a></li>
+    <li><strong>Google Play Billing</strong> (in-app purchases) — <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a></li>
+    <li><strong>Google Play services / ML Kit Document Scanner</strong> (on-device document scanning) — scanning is performed on your device.</li>
+  </ul>
+
+  <h2>5. International Data Transfers</h2>
+  <p>The third parties above (Google) may process your data outside the EEA (e.g., in the United States). Such transfers are carried out under safeguards recognized by the GDPR, such as the EU Standard Contractual Clauses (SCCs).</p>
+
+  <h2>6. Retention and Deletion</h2>
+  <p>The developer does not directly collect or store personal data. Retention and deletion of data collected by AdMob and Google Play follow those services' policies. You can reset your advertising identifier or limit ad tracking in your device settings.</p>
+
+  <h2>7. Your Rights (GDPR Arts. 15–22)</h2>
+  <p>If you reside in the EEA or the UK, you have the rights of access, rectification, erasure ("right to be forgotten"), restriction of processing, data portability, objection, and <strong>withdrawal of consent</strong> for consent-based processing (without affecting the lawfulness of processing before withdrawal). Because most of this data is processed by Google, you can exercise these rights directly through your Google account and device settings, or by contacting us below. You also have the right to <strong>lodge a complaint with your local supervisory authority</strong>.</p>
+
+  <h2>8. Your Choices</h2>
+  <ul>
+    <li>Device settings → Google → Ads: turn off ad personalization / reset advertising ID</li>
+    <li>App Settings → "Manage ad consent" (EEA, UK, Switzerland): change or withdraw consent</li>
+    <li>In-app purchase history: view in your Google Play account</li>
+  </ul>
+
+  <h2>9. Children's Privacy</h2>
+  <p>The app is not directed to children under 14 (or under the applicable digital-consent age under the GDPR) and does not knowingly collect their personal data.</p>
+
+  <h2>10. Changes to This Policy</h2>
+  <p>This policy may be updated. Any changes will be posted on this page and the "Last updated" date above will be revised.</p>
+
+  <h2>11. Contact and Controller</h2>
+  <p>Data Controller: Min Je Kim<br>
+    Privacy inquiries: <a href="mailto:kmj235874@gmail.com">kmj235874@gmail.com</a></p>
+</section>
+
+<script>
+  function setLang(l){
+    document.getElementById('ko').classList.toggle('active', l==='ko');
+    document.getElementById('en').classList.toggle('active', l==='en');
+    document.getElementById('btn-ko').classList.toggle('active', l==='ko');
+    document.getElementById('btn-en').classList.toggle('active', l==='en');
+    document.documentElement.lang = l;
+  }
+  setLang((navigator.language||'en').toLowerCase().startsWith('ko') ? 'ko' : 'en');
+</script>
 </body>
 </html>
