@@ -1,79 +1,127 @@
-<!DOCTYPE html>
+<!doctype html>
+<!--
+  배포 위치: app-policy 저장소의  qr/privacy.html  에 덮어쓰기 (이 RIM_QR 프로젝트 아님)
+  ⚠️ 앱 이름(QR Scanner & Generator)은 Play 스토어 등록명과 정확히 일치시키세요.
+     'Rim QR'을 쓰려면 <title>과 각 .muted 줄의 이름만 바꾸면 됩니다.
+-->
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>개인정보처리방침 - QR 스캐너</title>
-  <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 24px 16px; color: #333; line-height: 1.7; }
-    h1 { font-size: 24px; border-bottom: 2px solid #eee; padding-bottom: 12px; }
-    h2 { font-size: 18px; margin-top: 32px; color: #222; }
-    p, li { font-size: 15px; color: #444; }
-    ul { padding-left: 20px; }
-    .updated { color: #888; font-size: 14px; margin-bottom: 24px; }
-    a { color: #1a73e8; }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QR Scanner &amp; Generator — 개인정보처리방침 / Privacy Policy</title>
+<style>
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+       max-width:760px;margin:0 auto;padding:24px 18px;line-height:1.7;color:#1a1a1a}
+  h1{font-size:1.5rem;margin:.2em 0}h2{font-size:1.1rem;margin-top:1.6em}
+  .muted{color:#666;font-size:.9rem}a{color:#142588}
+  .toggle{display:flex;gap:8px;margin:8px 0 20px}
+  .toggle button{border:1px solid #ccc;background:#fff;border-radius:20px;
+       padding:6px 16px;cursor:pointer;font-size:.9rem}
+  .toggle button.active{background:#142588;color:#fff;border-color:#142588}
+  section{display:none}section.active{display:block}
+</style>
 </head>
 <body>
+<div class="toggle">
+  <button id="btn-ko" onclick="setLang('ko')">한국어</button>
+  <button id="btn-en" onclick="setLang('en')">English</button>
+</div>
 
+<!-- ===== 한국어 ===== -->
+<section id="ko">
   <h1>개인정보처리방침</h1>
-  <p class="updated">최종 업데이트: 2026년 6월 4일</p>
+  <p class="muted">QR Scanner &amp; Generator (Rim QR) · 개발자 Min Je Kim · 최종 업데이트: 2026-06-10</p>
+  <p>QR Scanner &amp; Generator(앱 내 표기: Rim QR, 이하 "앱")은 사용자의 개인정보를 중요하게 생각합니다. 본 방침은 앱이 어떤 정보를 다루는지 설명합니다. 핵심 기능(스캔·생성)은 인터넷 없이 동작하며, 스캔·생성 기록은 기본적으로 사용자의 기기에만 저장됩니다. 앱은 광고 표시를 위해서만 인터넷에 연결합니다.</p>
 
-  <p>
-    Min Je Kim(이하 "개발자")이 제공하는 <strong>QR 스캐너 &amp; 생성기</strong>(이하 "앱")은
-    사용자의 개인정보를 소중히 여기며, 관련 법령을 준수합니다.
-    본 방침은 앱이 수집하는 정보, 수집 목적, 보관 방법 등을 안내합니다.
-  </p>
+  <h2>1. 카메라</h2>
+  <p>QR 코드·바코드 인식을 위해 카메라를 사용합니다. 카메라 영상은 코드 인식에만 실시간으로 사용되며, 이미지로 저장하거나 외부로 전송하지 않습니다.</p>
 
-  <h2>1. 카메라 권한</h2>
-  <p>
-    앱은 QR 코드 및 바코드를 스캔하기 위해 카메라 권한을 사용합니다. 카메라 영상은 코드 인식에만 실시간으로 사용되며,
-    개발자는 카메라 이미지나 영상을 저장하거나 외부 서버로 전송하지 않습니다.
-  </p>
+  <h2>2. 위치</h2>
+  <p>위치 권한은 선택 사항입니다. 사용자가 "현재 위치 사용" 기능을 누른 경우에만, 위치 QR 코드의 위도·경도 입력란을 채우기 위해 기기의 대략적 위치(거친 위치)를 1회 읽습니다. 위치 정보는 기기 외부로 저장·전송·공유되지 않으며, 권한을 거부해도 좌표를 직접 입력해 위치 QR을 만들 수 있습니다.</p>
 
-  <h2>2. 수집하는 정보</h2>
-  <ul>
-    <li><strong>광고 식별자(Advertising ID)</strong>: 맞춤형 광고 제공을 위해 Google AdMob이 수집합니다.</li>
-    <li><strong>기기 정보</strong>: OS 버전, 기기 모델 등 광고 및 오류 분석에 사용됩니다.</li>
-    <li><strong>스캔/생성 기록</strong>: 사용자가 스캔하거나 생성한 코드 기록은 <strong>기기 내부에만</strong> 저장되며 외부로 전송되지 않습니다. 앱 내에서 삭제할 수 있습니다.</li>
-  </ul>
+  <h2>3. 연락처</h2>
+  <p>"연락처에서 가져오기"를 사용하면 시스템 연락처 선택기를 통해 사용자가 직접 고른 연락처 한 건만 읽어 연락처 QR 입력란을 채웁니다. 앱은 연락처 읽기 권한(READ_CONTACTS)을 요구하지 않으며, 선택한 연락처 정보를 외부로 저장·전송하지 않습니다.</p>
 
-  <h2>3. 정보 수집 목적</h2>
-  <ul>
-    <li>QR/바코드 스캔 및 생성 기능 제공</li>
-    <li>광고 게재 및 광고 성과 측정</li>
-    <li>앱 기능 제공 및 개선</li>
-  </ul>
+  <h2>4. 사진 및 미디어</h2>
+  <p>사용자가 저장을 누르면 생성한 QR 이미지를 기기 갤러리에 저장합니다. "이미지에서 스캔" 기능은 사진 선택기를 통해 사용자가 직접 고른 이미지에서만 코드를 인식하며, 전체 사진·저장소 접근 권한을 요구하지 않습니다. 이 과정은 모두 기기 내에서 처리됩니다.</p>
 
-  <h2>4. 제3자 제공</h2>
-  <p>개발자는 다음 제3자 서비스를 사용합니다. 각 서비스의 개인정보처리방침을 참고하세요.</p>
-  <ul>
-    <li><strong>Google AdMob</strong> (광고 서비스)<br>
-      <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></li>
-  </ul>
+  <h2>5. 광고 (Google AdMob)</h2>
+  <p>앱은 Google AdMob 광고를 표시합니다. AdMob은 맞춤 광고와 성과 측정을 위해 광고 식별자(Advertising ID)와 기기 정보(OS 버전, 기기 모델 등)를 수집·사용할 수 있습니다. 유럽경제지역(EEA)·영국·스위스 사용자에게는 관련 법규에 따라 광고 처리 전 동의를 요청합니다. 광고 식별자는 기기 설정에서 재설정하거나 맞춤설정을 해제할 수 있습니다.</p>
 
-  <h2>5. 정보 보관 및 삭제</h2>
-  <p>
-    스캔/생성 기록은 기기 내부 저장소에만 보관되며, 앱 내 기능 또는 앱 삭제를 통해 제거할 수 있습니다.
-    AdMob 등 제3자 서비스가 수집한 데이터의 보관 및 삭제는 해당 서비스의 정책에 따릅니다.
-  </p>
+  <h2>6. 기록 저장</h2>
+  <p>스캔하거나 생성한 코드의 기록은 사용자의 기기에만 저장됩니다. 앱 설정에서 기록을 삭제하거나 앱을 삭제하면 함께 제거됩니다.</p>
 
-  <h2>6. 아동 개인정보 보호</h2>
-  <p>앱은 만 14세 미만 아동을 대상으로 하지 않으며, 만 14세 미만 아동의 개인정보를 의도적으로 수집하지 않습니다.</p>
+  <h2>7. 제3자 서비스</h2>
+  <p>앱은 Google AdMob을 광고 제공업체로 사용합니다. 위치 좌표는 기기의 Google Play 서비스를 통해 제공됩니다. 자세한 내용은 <a href="https://policies.google.com/privacy">Google 개인정보처리방침</a>을 참고하세요.</p>
 
-  <h2>7. 사용자 권리</h2>
-  <ul>
-    <li>기기 설정 → Google → 광고에서 광고 개인화를 제한할 수 있습니다.</li>
-    <li>기기 설정에서 광고 ID를 재설정할 수 있습니다.</li>
-    <li>기기 설정에서 앱의 카메라 권한을 언제든지 해제할 수 있습니다.</li>
-  </ul>
+  <h2>8. 정보 공유</h2>
+  <p>앱은 사용자의 개인정보를 판매하지 않습니다. 위에 설명한 광고 식별자·기기 정보(AdMob) 외에는 어떤 정보도 제3자와 공유하지 않으며, 스캔·생성 데이터는 기기를 벗어나지 않습니다.</p>
 
-  <h2>8. 개인정보처리방침 변경</h2>
-  <p>본 방침은 필요 시 업데이트될 수 있습니다. 변경 사항은 이 페이지에 게시되며, 상단의 "최종 업데이트" 날짜가 변경됩니다.</p>
+  <h2>9. 사용자 권리 및 선택</h2>
+  <p>기기 설정에서 광고 맞춤설정 사용 중지, 광고 ID 재설정, 카메라·위치 권한 해제가 가능합니다. 앱 내 기록은 언제든 삭제할 수 있습니다.</p>
 
-  <h2>9. 문의</h2>
-  <p>개인정보 관련 문의사항은 아래로 연락해 주세요.<br>
-    이메일: <a href="mailto:kmj235874@gmail.com">kmj235874@gmail.com</a></p>
+  <h2>10. 아동</h2>
+  <p>본 앱은 만 14세 미만 아동을 대상으로 하지 않으며, 해당 아동의 개인정보를 고의로 수집하지 않습니다.</p>
 
+  <h2>11. 방침 변경</h2>
+  <p>본 방침은 변경될 수 있습니다. 변경 시 본 페이지에 갱신된 내용과 날짜를 게시합니다.</p>
+
+  <h2>12. 문의</h2>
+  <p>개인정보 관련 문의: <a href="mailto:kmj235874@gmail.com">kmj235874@gmail.com</a></p>
+</section>
+
+<!-- ===== English ===== -->
+<section id="en">
+  <h1>Privacy Policy</h1>
+  <p class="muted">QR Scanner &amp; Generator (Rim QR) · Developer: Min Je Kim · Last updated: 2026-06-10</p>
+  <p>QR Scanner &amp; Generator (shown in-app as Rim QR, "the app") respects your privacy. This policy explains what information the app handles. Core features (scanning and creating) work without internet, and your scan/creation history is stored only on your device by default. The app connects to the internet only to display ads.</p>
+
+  <h2>1. Camera</h2>
+  <p>The camera is used to scan QR codes and barcodes. The camera feed is used only for real-time code recognition; it is never saved as an image or transmitted anywhere.</p>
+
+  <h2>2. Location</h2>
+  <p>Location permission is optional. Only when you tap "Use my location," the app reads your device's approximate (coarse) location once to fill in the latitude and longitude for a Location QR code. Your location is never stored, transmitted, or shared, and you can still create a Location QR by entering coordinates manually if you decline the permission.</p>
+
+  <h2>3. Contacts</h2>
+  <p>When you use "Import from contacts," the app reads only the single contact you pick through the system contact picker to fill in the Contact QR fields. The app does not request the READ_CONTACTS permission and does not store or transmit the selected contact's information.</p>
+
+  <h2>4. Photos and Media</h2>
+  <p>When you choose to save a generated QR image, it is saved to your device gallery. The "Scan from image" feature recognizes codes only from an image you pick through the system photo picker and does not request full photo or storage access. All of this is processed on your device.</p>
+
+  <h2>5. Advertising (Google AdMob)</h2>
+  <p>The app shows ads via Google AdMob. AdMob may collect and use an advertising identifier and device information (OS version, device model, etc.) for personalized ads and performance measurement. Users in the EEA, UK, and Switzerland are asked for consent before ad processing, as required by law. You can reset your advertising identifier or opt out of ad personalization in your device settings.</p>
+
+  <h2>6. History Storage</h2>
+  <p>The history of scanned and created codes is stored only on your device. You can delete it in the app settings, or it is removed when you uninstall the app.</p>
+
+  <h2>7. Third-Party Services</h2>
+  <p>The app uses Google AdMob as its advertising provider. Location coordinates are provided by Google Play services on your device. See the <a href="https://policies.google.com/privacy">Google Privacy Policy</a> for details.</p>
+
+  <h2>8. Data Sharing</h2>
+  <p>The app does not sell your personal information. Apart from the advertising identifier and device information described above (AdMob), no information is shared with third parties, and your scan/creation data never leaves your device.</p>
+
+  <h2>9. Your Rights and Choices</h2>
+  <p>In your device settings you can opt out of ad personalization, reset your advertising ID, and revoke the camera and location permissions. You can delete your in-app history at any time.</p>
+
+  <h2>10. Children</h2>
+  <p>This app is not intended for children under 14 and does not knowingly collect their personal data.</p>
+
+  <h2>11. Changes to This Policy</h2>
+  <p>This policy may be updated. Any changes will be posted on this page with a revised date.</p>
+
+  <h2>12. Contact</h2>
+  <p>Privacy inquiries: <a href="mailto:kmj235874@gmail.com">kmj235874@gmail.com</a></p>
+</section>
+
+<script>
+  function setLang(l){
+    document.getElementById('ko').classList.toggle('active', l==='ko');
+    document.getElementById('en').classList.toggle('active', l==='en');
+    document.getElementById('btn-ko').classList.toggle('active', l==='ko');
+    document.getElementById('btn-en').classList.toggle('active', l==='en');
+    document.documentElement.lang = l;
+  }
+  setLang((navigator.language||'en').toLowerCase().startsWith('ko') ? 'ko' : 'en');
+</script>
 </body>
 </html>
